@@ -1,0 +1,14 @@
+dist
+node_modules
+temp
+tmp
+Desktop.ini
+Thumbs.db
+*.lock
+*.bak
+*.log
+*.tmp
+.DS_Store
+.idea
+.vscode
+.history
