@@ -1,3 +1,5 @@
-## use : npm i nuo-react-cli -g
+## use : 
+npm i nuo-react-cli -g
  
-## init project :nuo-react init XXXX
+## init project :
+nuo-react init XXXX
