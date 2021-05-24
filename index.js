@@ -39,7 +39,19 @@ program.version('1.0.0', '-v, --version')
                             const result = handlebars.compile(content)(meta);
                             fs.writeFileSync(fileName, result);
                         }
-                        console.log(chalk.green('项目初始化完成,请进入项目目录并安装依赖 运行 yarn dev or npm run dev'));
+                        console.log(chalk.green('正在初始化项目，可能需要一会...'));
+                        const exec = require('child_process').exec;
+                        const cwd = `./${name}`
+                        const cmdStr = `npm install`;
+                        exec(cmdStr, { cwd }, (err) => {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                console.log(
+                                    chalk.green(`项目初始化完成,请 cd ${name} : yarn dev or npm run dev`)
+                                );
+                            }
+                        });
                     }
                 })
             })
